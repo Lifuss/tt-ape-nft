@@ -8,6 +8,13 @@ export default {
         messina: ["Messina Sans Mono", "sans-serif"],
         right: ["Right Grotesk", "sans-serif"],
       },
+      colors: {
+        dark: "#1e1e1e",
+        accent: "#dc3b5a",
+      },
+      backgroundColor: {
+        darkOpacity: "rgba(30, 30, 30, 0.1)",
+      },
     },
   },
   plugins: [],

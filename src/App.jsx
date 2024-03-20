@@ -1,8 +1,13 @@
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+
 function App() {
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
+    <>
+      <Menu />
+      <Header />
+      <main></main>
+    </>
   );
 }
 
