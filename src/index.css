@@ -8,17 +8,9 @@
 @font-face {
   font-family: "Right Grotesk", sans-serif;
 
-  src: url("./assets/fonts/RightGrotesk/RightGrotesk-Medium.otf")
+  src: url("./assets/fonts/RightGrotesk/RightGrotesk-CompactBlack.otf")
     format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Right Grotesk", sans-serif;
-
-  src: url("./assets/fonts/RightGrotesk/RightGrotesk-Black.otf")
-    format("opentype");
-  font-weight: 900;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -28,6 +20,6 @@ body {
   background-color: #181818;
 }
 #root {
-  height: 2000px;
+  min-height: 2000px;
   position: relative;
 }

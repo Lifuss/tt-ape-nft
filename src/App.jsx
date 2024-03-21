@@ -1,12 +1,15 @@
-import Header from "./components/Header";
+import About from "./components/About";
+import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 
 function App() {
   return (
     <>
-      <Menu />
-      <Header />
-      <main></main>
+      <main>
+        <Menu />
+        <Hero />
+        <About />
+      </main>
     </>
   );
 }
