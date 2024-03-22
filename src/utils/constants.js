@@ -1,0 +1,22 @@
+export const faqs = [
+  {
+    question: "WHAT IS AN NFT COLLECTION?",
+    answer:
+      "An NFT collection is a group of unique digital assets, each represented by a non-fungible token, typically created around a specific theme or style.",
+  },
+  {
+    question: "HOW DO I PURCHASE NFTS FROM A COLLECTION?",
+    answer:
+      "To purchase nfts from a collection, you typically need to use cryptocurrency on a blockchain0based marketplace.",
+  },
+  {
+    question: "CAN I SELL OR TRADE NFTS FROM A COLLECTION?",
+    answer:
+      "Yes, you can sell or trade NFTs from a collection like you would other digital assets.",
+  },
+  {
+    question: "WHAT RIGHTS DO I HAVE AS AN OWNER OF AN NFT?",
+    answer:
+      "As an NFT owner, you can own, transfer, potentially access exclusive content, resell, but don't automatically get copyright or intellectual property rights.",
+  },
+];

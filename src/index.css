@@ -10,7 +10,7 @@
 
   src: url("./assets/fonts/RightGrotesk/RightGrotesk-CompactBlack.otf")
     format("opentype");
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -20,6 +20,6 @@ body {
   background-color: #181818;
 }
 #root {
-  min-height: 2000px;
+  min-height: 4000px;
   position: relative;
 }

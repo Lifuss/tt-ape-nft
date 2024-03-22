@@ -3,7 +3,7 @@ import aboutApe from "../assets/img/aboutApe.webp";
 const About = () => {
   return (
     <section className="px-8 flex flex-col items-center gap-10 mb-[60px]">
-      <h2 className="font-right text-white text-[28px] leading-none -tracking-wide uppercase break-normal w-[75%]">
+      <h2 className="text-white text-[28px] leading-none -tracking-wide uppercase break-normal w-[75%]">
         a Story that started with{" "}
         <span className="text-accent">
           one simple <br /> ape
