@@ -1,3 +1,5 @@
+import NavButtons from "./NavButtons";
+
 const MindMap = () => {
   return (
     <section className="px-8 w-[75%] flex flex-col items-center mx-auto text-white mb-[60px]">
@@ -11,10 +13,7 @@ const MindMap = () => {
         </p>
         <h3 className="text-2xl">YAPE DROP</h3>
       </div>
-      <ul className="flex font-biro text-2xl gap-12 ">
-        <li>Prev</li>
-        <li>Next</li>
-      </ul>
+      <NavButtons />
     </section>
   );
 };
