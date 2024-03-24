@@ -5,9 +5,10 @@ const XTextBlock = ({
   text = "",
   textSize = "text-xs",
   lineHeight = "1.14",
+  width = "75%",
 }) => {
   return (
-    <div className="w-[75%] flex flex-col items-center">
+    <div className={`w-[${width}] flex flex-col items-center text-center`}>
       <svg width={xSize} height={xSize} className="mb-4">
         <use href={`${sprite}#icon-sharp`}></use>
       </svg>

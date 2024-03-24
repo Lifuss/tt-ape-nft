@@ -27,7 +27,7 @@ const Collection = () => {
 
   return (
     <section id="arts" className="px-8 w-[75%] mx-auto mb-[60px]">
-      <h2 className="text-[28px] text-white font-black leading-[0.91] mb-6 text-center">
+      <h2 className="text-[44px] text-white font-black leading-[0.91] mb-6 text-center">
         COLLECTION
       </h2>
       <Slider

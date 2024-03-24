@@ -11,9 +11,13 @@ import MobileMenu from "./components/MobileMenu";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-toastify/dist/ReactToastify.css";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const isTablet = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -23,10 +27,10 @@ function App() {
       <Menu toggleMenu={toggleMenu} isOpen={isOpen} />
       <MobileMenu toggleMenu={toggleMenu} isOpen={isOpen} />
       <main>
-        <Hero isOpen={isOpen} />
-        <About />
-        <MindMap />
-        <Faq />
+        <Hero isOpen={isOpen} isTablet={isTablet} />
+        <About isTablet={isTablet} />
+        <MindMap isTablet={isTablet} />
+        <Faq isTablet={isTablet} />
         <Collection />
         <Mint />
       </main>

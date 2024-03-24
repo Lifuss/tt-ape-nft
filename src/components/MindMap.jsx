@@ -4,7 +4,7 @@ import { mindMapArr } from "../utils/constants";
 import { useRef } from "react";
 import sprite from "../assets/icons/sprite.svg";
 
-const MindMap = () => {
+const MindMap = ({ isTablet }) => {
   let sliderRef = useRef(null);
   const next = () => {
     sliderRef.slickNext();
@@ -23,50 +23,90 @@ const MindMap = () => {
   return (
     <section
       id="mindmap"
-      className="px-8 w-[75%] mx-auto text-white mb-[60px] "
+      className="px-8 md:px-0 w-[75%] md:w-[592px] text-white mb-[60px] md:mb-[80px] md:flex md:justify-center md:items-center md:flex-col mx-auto"
     >
-      <h2 className="text-[32px] leading-none -tracking-wide uppercase break-normal mb-6">
+      <h2 className="text-[44px] md:text-[80px] leading-none uppercase mb-6 md:mb-[40px] text-center">
         MIND map
       </h2>
 
-      <Slider
-        ref={(slider) => {
-          sliderRef = slider;
-        }}
-        {...settings}
-        className="mb-6"
-      >
-        {mindMapArr.map((item, index) => {
-          if (!item.icon) {
-            return (
-              <div
-                key={index}
-                className="py-6 px-3 bg-dark rounded-xl h-[242px] flex flex-col justify-between"
-              >
-                <p className="font-messina text-xs font-light uppercase leading-[1.17]  mb-[78px]">
-                  {item.text}
-                </p>
+      {!isTablet ? (
+        <>
+          <Slider
+            ref={(slider) => {
+              sliderRef = slider;
+            }}
+            {...settings}
+            className="mb-6"
+          >
+            {mindMapArr.map((item, index) => {
+              if (!item.icon) {
+                return (
+                  <div
+                    key={index}
+                    className="py-6 px-3 bg-dark rounded-xl h-[242px] flex flex-col justify-between"
+                  >
+                    <p className="font-messina text-xs font-light uppercase leading-[1.17]">
+                      {item.text}
+                    </p>
 
-                <h3 className="text-2xl">{item.title}</h3>
-              </div>
-            );
-          } else {
-            return (
-              <a
-                key={index}
-                className="py-6 px-3 bg-accent rounded-xl h-[242px] flex flex-col justify-between"
-                href="#"
-              >
-                <svg className="w-6 h-6 ml-auto">
-                  <use href={`${sprite}#icon-arrow`}></use>
-                </svg>
-                <h3 className="text-2xl">{item.title}</h3>
-              </a>
-            );
-          }
-        })}
-      </Slider>
-      <NavButtons next={next} previous={previous} />
+                    <h3 className="text-[32px] uppercase">{item.title}</h3>
+                  </div>
+                );
+              } else {
+                return (
+                  <a
+                    key={index}
+                    className="py-6 px-3 bg-accent rounded-xl h-[242px] flex flex-col justify-between"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <svg className="w-6 h-6 ml-auto">
+                      <use href={`${sprite}#icon-arrow`}></use>
+                    </svg>
+                    <h3 className="text-[32px] uppercase">{item.title}</h3>
+                  </a>
+                );
+              }
+            })}
+          </Slider>
+          <NavButtons next={next} previous={previous} />
+        </>
+      ) : (
+        <div className="grid grid-cols-2 gap-6 ">
+          {mindMapArr.map((item, index) => {
+            if (!item.icon) {
+              return (
+                <div
+                  key={index}
+                  className="p-6 bg-dark rounded-xl h-[242px] w-[284px] flex flex-col justify-between"
+                >
+                  <p className="font-messina w-[128px] ml-auto text-xs font-light uppercase leading-[1.17]">
+                    {item.text}
+                  </p>
+
+                  <h3 className="text-[32px] uppercase">{item.title}</h3>
+                </div>
+              );
+            } else {
+              return (
+                <a
+                  key={index}
+                  className="p-6 bg-accent rounded-xl h-[242px] w-[284px] flex flex-col justify-between"
+                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <svg className="w-6 h-6 ml-auto">
+                    <use href={`${sprite}#icon-arrow`}></use>
+                  </svg>
+                  <h3 className="text-[32px] uppercase">{item.title}</h3>
+                </a>
+              );
+            }
+          })}
+        </div>
+      )}
     </section>
   );
 };

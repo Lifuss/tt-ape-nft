@@ -15,8 +15,8 @@ const Menu = ({ toggleMenu, isOpen }) => {
   }, []);
 
   return (
-    <nav className="fixed top-[62px] right-4 z-20">
-      <ul className="flex flex-col  gap-2">
+    <nav className="fixed top-[62px] right-4 md:right-7 z-20">
+      <ul className="flex flex-col gap-2">
         <li
           className={`w-12 h-12 inline-flex justify-center items-center bg-darkOpacity backdrop-blur-md rounded-lg text-xs font-messina leading-[1.17] font-semibold cursor-pointer  hover:underline focus:underline transition-colors duration-200 ease-in-out ${
             scrollDistance > 470 || isOpen

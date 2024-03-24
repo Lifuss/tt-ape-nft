@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        biro: ["Biro Script Plus Bold US", "sans-serif"],
+        biro: ["Biro Script Plus", "sans-serif"],
+        biroUS: ["Biro Script Plus US", "sans-serif"],
         messina: ["Messina Sans Mono", "sans-serif"],
         right: ["Right Grotesk", "sans-serif"],
       },
@@ -16,7 +17,8 @@ export default {
         darkOpacity: "rgba(30, 30, 30, 0.1)",
       },
       animation: {
-        marquee: "marquee 10s linear infinite",
+        mobile: "marquee 10s linear infinite",
+        table: "marquee 20s linear infinite",
       },
       keyframes: {
         marquee: {

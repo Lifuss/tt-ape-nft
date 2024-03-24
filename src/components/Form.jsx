@@ -28,7 +28,7 @@ const Form = () => {
         return (
           <label key={index} className="flex w-full">
             <div className="w-12 h-12 flex justify-center items-center bg-dark rounded-s-lg shrink-0">
-              <svg width="24" height="24" className="fill-blue-500">
+              <svg width="24" height="24" className="fill-[#5A65F2]">
                 <use href={`${sprite}#icon-${item}`}></use>
               </svg>
             </div>
@@ -40,9 +40,9 @@ const Form = () => {
                   pattern:
                     item === "discord" ? discordPattern : metaMaskPattern,
                 })}
-                className={`bg-inherit h-12 py-3 px-1 border-t-[1px] border-b-[1px] border-e-[1px] border-s-[1px] border-dark ${
+                className={`bg-inherit h-12 border-t-[1px] border-b-[1px] border-e-[1px] border-s-[1px] border-dark ${
                   errors[item] && "border-accent"
-                } rounded-e-lg font-messina text-sm font-light text-white leading-[1.17] focus:outline-none focus:border-white`}
+                } rounded-e-lg font-messina text-xs font-light text-white leading-[1.17] pl-3 focus:outline-none focus:border-white `}
               />
               {errors[item] && (
                 <p className="text-accent text-xs ml-auto" role="alert">
