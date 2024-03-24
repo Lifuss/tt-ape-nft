@@ -1,10 +1,11 @@
 {
   "name": "tt-ape-nft",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "author": "Arsen Hryhoriak",
   "description": "Ape NFT landing page",
+  "homepage": "https://lifuss.github.io/tt-ape-nft/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
