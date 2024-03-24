@@ -1,4 +1,4 @@
-import sprite from "../assets/icons/spire.svg";
+import sprite from "../assets/icons/sprite.svg";
 
 const XTextBlock = ({
   xSize = "24",

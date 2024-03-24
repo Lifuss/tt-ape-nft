@@ -1,8 +1,8 @@
-const NavButtons = () => {
+const NavButtons = ({ next, previous }) => {
   return (
-    <ul className="flex font-biro text-2xl gap-12 text-white">
-      <li>Prev</li>
-      <li>Next</li>
+    <ul className="flex justify-center font-biro text-2xl gap-12 text-white">
+      <li onClick={previous}>Prev</li>
+      <li onClick={next}>Next</li>
     </ul>
   );
 };

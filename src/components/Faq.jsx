@@ -5,7 +5,7 @@ const Faq = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="px-8 flex flex-col items-center mb-[60px]">
+    <section id="faq" className="px-8 flex flex-col items-center mb-[60px]">
       <h2 className="text-[32px] text-white font-black leading-[0.91] mb-[18px]">
         FAQ
       </h2>

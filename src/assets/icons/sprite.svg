@@ -145,5 +145,10 @@
             <path fill="#fff" style="fill: var(--color1, #fff)"
                 d="M9.636 8.222l14.142 14.142-1.414 1.414-14.142-14.142 1.414-1.414z"></path>
         </symbol>
+        <symbol id="icon-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.95929 0H24V21.0406H17.5259V11.052L4.57781 24L0 19.4222L12.9481 6.47402H2.95929V0Z"
+                fill="white" />
+        </symbol>
     </defs>
 </svg>

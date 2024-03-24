@@ -1,15 +1,20 @@
 import aboutApe from "../assets/img/aboutApe.webp";
+import RunningLine from "./RunningLine";
 import XTextBlock from "./XTextBlock";
+
 const About = () => {
   return (
-    <section className="px-8 flex flex-col items-center gap-10 mb-[60px]">
+    <section
+      id="about"
+      className="px-8 flex flex-col items-center gap-10 mb-[60px]"
+    >
       <h2 className="text-white text-[28px] leading-none -tracking-wide uppercase break-normal w-[75%]">
         a Story that started with{" "}
         <span className="text-accent">
           one simple <br /> ape
         </span>
       </h2>
-      <p className="font-messina text-base font-light text-white text-right leading-[1.19]  w-[75%]">
+      <p className="font-messina text-base font-light text-white text-right leading-[1.19] w-[75%]">
         WHO GOT
         <br />
         FED UP WITH BORING
@@ -34,7 +39,7 @@ const About = () => {
       />
       <div className="w-[75%] flex flex-col items-center">
         <img src={aboutApe} alt="ape in admiral cap" />
-        <div className="w-full h-5 bg-accent "></div>
+        <RunningLine />
       </div>
     </section>
   );

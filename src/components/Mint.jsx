@@ -3,7 +3,7 @@ import XTextBlock from "./XTextBlock";
 
 const Mint = () => {
   return (
-    <section className="px-8 flex flex-col items-center mb-[60px]">
+    <section id="mint" className="px-8 flex flex-col items-center mb-[60px]">
       <h2 className="text-[28px] text-white font-black leading-[0.91] mb-6 uppercase">
         Are you in?
       </h2>

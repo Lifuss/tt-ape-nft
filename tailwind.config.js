@@ -15,7 +15,17 @@ export default {
       backgroundColor: {
         darkOpacity: "rgba(30, 30, 30, 0.1)",
       },
+      animation: {
+        marquee: "marquee 10s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
     },
   },
+  important: true,
   plugins: [],
 };

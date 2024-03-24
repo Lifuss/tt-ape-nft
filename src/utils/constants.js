@@ -20,3 +20,31 @@ export const faqs = [
       "As an NFT owner, you can own, transfer, potentially access exclusive content, resell, but don't automatically get copyright or intellectual property rights.",
   },
 ];
+
+export const mobileMenu = ["about", "mindmap", "faq", "arts", "mint"];
+
+export const formRender = ["discord", "metamask"];
+
+export const mindMapArr = [
+  {
+    text: "All owners of APE NFTs and all future collections will receive a percentage of sales based on the number of NFTs they own",
+    title: "YAPE DROP",
+  },
+  {
+    text: "Launch of the 2nd YACHT Collection Releasing the first version of the Ape Slam Game",
+    title: "New Collection",
+    bg: "bg-dark",
+  },
+  {
+    text: "Launch your own token, the proceeds of which will go to a global fund to LAUNCH YACHT CLUB AND PROMOTE it",
+    title: "Token",
+  },
+  {
+    text: "",
+    title: "Learn more in mind map",
+    icon: "icon-arrow",
+  },
+];
+
+export const discordPattern = /^(?!.*\.\.)[a-z0-9_.]{2,32}$/;
+export const metaMaskPattern = /^0x[a-fA-F0-9]{40}$/g;
