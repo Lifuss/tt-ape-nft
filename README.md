@@ -1,6 +1,13 @@
 # tt-ape-nft
 
-This is test task project for SoftRyzen company
+![Cover - Completed](https://github.com/Lifuss/tt-ape-nft/assets/136361705/a1d2567f-47fc-437b-8dd0-0776956bf2fa)
+
+This repository is intership project for SoftRyzen company
+
+## Tech stack
+- React
+- Tailwind
+- Vite
 
 ## Requirements for local setup
 
