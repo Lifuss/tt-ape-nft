@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-toastify/dist/ReactToastify.css";
 import { useMediaQuery } from "react-responsive";
+import TabletMenu from "./components/TabletMenu";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,14 +25,18 @@ function App() {
   };
   return (
     <>
-      <Menu toggleMenu={toggleMenu} isOpen={isOpen} />
-      <MobileMenu toggleMenu={toggleMenu} isOpen={isOpen} />
+      <Menu toggleMenu={toggleMenu} isOpen={isOpen} isTablet={isTablet} />
+      {!isTablet ? (
+        <MobileMenu toggleMenu={toggleMenu} isOpen={isOpen} />
+      ) : (
+        <TabletMenu toggleMenu={toggleMenu} isOpen={isOpen} />
+      )}
       <main>
         <Hero isOpen={isOpen} isTablet={isTablet} />
         <About isTablet={isTablet} />
         <MindMap isTablet={isTablet} />
         <Faq isTablet={isTablet} />
-        <Collection />
+        <Collection isTablet={isTablet} />
         <Mint />
       </main>
       <Footer />

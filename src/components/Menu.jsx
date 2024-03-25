@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import sprite from "../assets/icons/sprite.svg";
 
-const Menu = ({ toggleMenu, isOpen }) => {
+const Menu = ({ toggleMenu, isOpen, isTablet }) => {
   const [scrollDistance, setScrollDistance] = useState(0);
 
   useEffect(() => {
@@ -18,8 +18,10 @@ const Menu = ({ toggleMenu, isOpen }) => {
     <nav className="fixed top-[62px] right-4 md:right-7 z-20">
       <ul className="flex flex-col gap-2">
         <li
-          className={`w-12 h-12 inline-flex justify-center items-center bg-darkOpacity backdrop-blur-md rounded-lg text-xs font-messina leading-[1.17] font-semibold cursor-pointer  hover:underline focus:underline transition-colors duration-200 ease-in-out ${
-            scrollDistance > 470 || isOpen
+          className={`w-12 h-12 inline-flex justify-center items-center bg-darkOpacity backdrop-blur-md  ${
+            isOpen && isTablet ? "rounded-e-lg" : "rounded-lg"
+          } text-xs font-messina leading-[1.17] font-semibold cursor-pointer  hover:underline focus:underline transition-colors duration-200 ease-in-out ${
+            scrollDistance > 470 || (isOpen && !isTablet)
               ? "text-white hover:text-accent focus:text-accent"
               : "hover:text-white focus:text-white"
           }`}
@@ -31,14 +33,16 @@ const Menu = ({ toggleMenu, isOpen }) => {
           <a
             href="https://discord.gg"
             className={`w-12 h-12 inline-flex justify-center items-center bg-darkOpacity backdrop-blur-md rounded-lg transition-all duration-200 ease-in-out group ${
-              scrollDistance > 420 || isOpen ? " text-white" : " text-dark"
+              scrollDistance > 420 || (isOpen && !isTablet)
+                ? " text-white"
+                : " text-dark"
             } `}
             target="_blank"
             rel="noreferrer noopener"
           >
             <svg
               className={`w-4 h-4 fill-current transition-all duration-200 ease-in-out ${
-                scrollDistance > 420 || isOpen
+                scrollDistance > 420 || (isOpen && !isTablet)
                   ? "group-hover:text-accent group-focus:text-accent"
                   : "group-hover:text-white group-focus:text-white"
               }`}
@@ -51,14 +55,16 @@ const Menu = ({ toggleMenu, isOpen }) => {
           <a
             href="#"
             className={`w-12 h-12 inline-flex justify-center items-center bg-darkOpacity backdrop-blur-md rounded-lg transition-all duration-200 ease-in-out group ${
-              scrollDistance > 370 || isOpen ? " text-white" : " text-dark"
+              scrollDistance > 370 || (isOpen && !isTablet)
+                ? " text-white"
+                : " text-dark"
             }`}
             target="_blank"
             rel="noreferrer noopener"
           >
             <svg
               className={`w-4 h-4 fill-current transition-all duration-200 ease-in-out ${
-                scrollDistance > 370 || isOpen
+                scrollDistance > 370 || (isOpen && !isTablet)
                   ? "group-hover:text-accent group-focus:text-accent"
                   : "group-hover:text-white group-focus:text-white"
               }`}
@@ -71,14 +77,16 @@ const Menu = ({ toggleMenu, isOpen }) => {
           <a
             href="https://twitter.com/"
             className={`w-12 h-12 inline-flex justify-center items-center bg-darkOpacity backdrop-blur-md rounded-lg transition-all duration-200 ease-in-out group ${
-              scrollDistance > 320 || isOpen ? " text-white" : " text-dark"
+              scrollDistance > 320 || (isOpen && !isTablet)
+                ? " text-white"
+                : " text-dark"
             }`}
             target="_blank"
             rel="noreferrer noopener"
           >
             <svg
               className={`w-4 h-4 fill-current transition-all duration-200 ease-in-out ${
-                scrollDistance > 320 || isOpen
+                scrollDistance > 320 || (isOpen && !isTablet)
                   ? "group-hover:text-accent group-focus:text-accent"
                   : "group-hover:text-white group-focus:text-white"
               }`}
