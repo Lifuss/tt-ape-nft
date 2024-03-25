@@ -7,7 +7,7 @@ const Mint = () => {
       id="mint"
       className="px-8 md:px-0 flex flex-col items-center mb-[60px] md:mb-[80px] md:w-[397px] md:mx-auto"
     >
-      <h2 className="text-[44px] md:text-[80px] text-white font-black leading-[0.91] md:leading-none mb-6 uppercase">
+      <h2 className="text-[44px] md:text-[80px] desk:text-[160px] text-white font-black leading-[0.91] md:leading-none mb-6 desk:mb-20 whitespace-nowrap uppercase">
         Are you in?
       </h2>
       <XTextBlock
@@ -15,6 +15,7 @@ const Mint = () => {
         text="Join the YACHT APE community to be one of the first to receive our limited edition NFT"
         lineHeight="1.19"
         textSize="text-base"
+        width="581px"
       />
       <Form />
     </section>

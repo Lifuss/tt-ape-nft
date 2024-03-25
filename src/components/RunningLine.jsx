@@ -5,10 +5,25 @@ const RunningLine = () => {
   const isTablet = useMediaQuery({
     query: "(min-width: 768px)",
   });
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1440px)",
+  });
 
   let runningTextArr = ["BREAK RULES", "HAVE NO LIMITS"];
-  if (isTablet) {
+  if (isTablet && !isDesktop) {
     runningTextArr = [
+      "BREAK RULES",
+      "HAVE NO LIMITS",
+      "BREAK RULES",
+      "HAVE NO LIMITS",
+    ];
+  }
+  if (isDesktop) {
+    runningTextArr = [
+      "BREAK RULES",
+      "HAVE NO LIMITS",
+      "BREAK RULES",
+      "HAVE NO LIMITS",
       "BREAK RULES",
       "HAVE NO LIMITS",
       "BREAK RULES",
@@ -18,7 +33,7 @@ const RunningLine = () => {
 
   return (
     <div className="w-screen bg-accent overflow-hidden">
-      <div className="inline-flex text-white text-[36px] items-center space-x-4 whitespace-nowrap animate-mobile md:animate-table">
+      <div className="inline-flex text-white text-[36px] desk:text-[64px] items-center space-x-4 whitespace-nowrap animate-mobile md:animate-table desk:animate-desktop">
         <div className="flex items-center space-x-4">
           {runningTextArr.map((item, key) => {
             return (

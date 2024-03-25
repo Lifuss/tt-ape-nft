@@ -19,12 +19,16 @@ export default {
       animation: {
         mobile: "marquee 10s linear infinite",
         table: "marquee 20s linear infinite",
+        desktop: "marquee 35s linear infinite",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
         },
+      },
+      screens: {
+        desk: "1440px",
       },
     },
   },

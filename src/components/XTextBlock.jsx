@@ -13,7 +13,7 @@ const XTextBlock = ({
         <use href={`${sprite}#icon-sharp`}></use>
       </svg>
       <p
-        className={`font-messina ${textSize} font-light text-white text-center leading-[${lineHeight}] uppercase`}
+        className={`font-messina ${textSize} desk:text-2xl font-light text-white text-center leading-[${lineHeight}] desk:leading-[1.21] uppercase`}
       >
         {text}
       </p>
